@@ -39,6 +39,5 @@ public class Test3 {
         }
 
         Thread.sleep(5000);
-        System.gc();
     }
 }
