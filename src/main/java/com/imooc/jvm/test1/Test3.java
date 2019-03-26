@@ -18,6 +18,15 @@ public class Test3 {
        */
 
 
+    /*
+       -Xms40m
+       -Xmx40m
+       -Xmn10m
+       -XX:+PrintGCDetails
+       -XX:+PrintGCDateStamps
+       -XX:+UseSerialGC
+       */
+
 
     public static void main(String[] args) throws Exception {
         Thread.sleep(15000);
