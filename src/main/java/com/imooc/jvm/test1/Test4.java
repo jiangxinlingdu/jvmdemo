@@ -31,6 +31,6 @@ public class Test4 {
         list = null;
         System.gc();
 
-        Thread.sleep(50000);
+        Thread.sleep(2000);
     }
 }
