@@ -1,21 +1,20 @@
-package com.imooc.jvm.test1;
+package com.imooc.jvm;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test5 {
+public class XmsXmxDemo2 {
     private static final int _1MB = 1024 * 1024;
 
 
     /*
        -Xms20m
-       -Xmx20m
+       -Xmx40m
        -Xmn10m
        -XX:+PrintGCDetails
        -XX:+PrintGCDateStamps
        -XX:+UseSerialGC
-       -XX:+HeapDumpOnOutOfMemoryError
        */
 
 
@@ -29,6 +28,8 @@ public class Test5 {
             list.add(new byte[_1MB]);
             Thread.sleep(100);
         }
+        list = null;
+        System.gc();
 
         Thread.sleep(2000);
     }

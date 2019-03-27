@@ -1,9 +1,9 @@
-package com.imooc.jvm.test1;
+package com.imooc.jvm;
 
 
 
 
-public class Test2 {
+public class GCLogsDemo {
     private static final int _1MB = 1024 * 1024;
 
 

@@ -1,10 +1,10 @@
-package com.imooc.jvm.test1;
+package com.imooc.jvm;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test4 {
+public class XmsXmxDemo {
     private static final int _1MB = 1024 * 1024;
 
 
@@ -18,6 +18,15 @@ public class Test4 {
        */
 
 
+    /*
+       -Xms40m
+       -Xmx40m
+       -Xmn10m
+       -XX:+PrintGCDetails
+       -XX:+PrintGCDateStamps
+       -XX:+UseSerialGC
+       */
+
 
     public static void main(String[] args) throws Exception {
         Thread.sleep(15000);
@@ -28,9 +37,7 @@ public class Test4 {
             list.add(new byte[_1MB]);
             Thread.sleep(100);
         }
-        list = null;
-        System.gc();
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 }

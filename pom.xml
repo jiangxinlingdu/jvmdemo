@@ -22,7 +22,7 @@
                     <archive>
                         <manifest>
                             <!-- 此处指定main方法入口的class -->
-                            <mainClass>com.imooc.jvm.test1.Test2</mainClass>
+                            <mainClass>com.imooc.jvm.GCLogsDemo</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
