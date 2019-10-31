@@ -1,4 +1,4 @@
-package com.imooc.jvm;
+package com.lingdu.jvm;
 
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -42,10 +42,12 @@ public class DeadLockDemo extends Thread {
             } catch (InterruptedException e1) {
                 e1.printStackTrace();
             } finally {
-                if (a.isHeldByCurrentThread())
+                if (a.isHeldByCurrentThread()) {
                     a.unlock();
-                if (b.isHeldByCurrentThread())
+                }
+                if (b.isHeldByCurrentThread()) {
                     b.unlock();
+                }
             }
 
         }
@@ -61,10 +63,12 @@ public class DeadLockDemo extends Thread {
             } catch (InterruptedException e1) {
                 e1.printStackTrace();
             } finally {
-                if (c.isHeldByCurrentThread())
+                if (c.isHeldByCurrentThread()) {
                     c.unlock();
-                if (b.isHeldByCurrentThread())
+                }
+                if (b.isHeldByCurrentThread()) {
                     b.unlock();
+                }
             }
 
         }
@@ -80,10 +84,12 @@ public class DeadLockDemo extends Thread {
             } catch (InterruptedException e1) {
                 e1.printStackTrace();
             } finally {
-                if (c.isHeldByCurrentThread())
+                if (c.isHeldByCurrentThread()) {
                     c.unlock();
-                if (d.isHeldByCurrentThread())
+                }
+                if (d.isHeldByCurrentThread()) {
                     d.unlock();
+                }
             }
 
         }
@@ -99,10 +105,12 @@ public class DeadLockDemo extends Thread {
             } catch (InterruptedException e1) {
                 e1.printStackTrace();
             } finally {
-                if (d.isHeldByCurrentThread())
+                if (d.isHeldByCurrentThread()) {
                     d.unlock();
-                if (a.isHeldByCurrentThread())
+                }
+                if (a.isHeldByCurrentThread()) {
                     a.unlock();
+                }
             }
 
         }

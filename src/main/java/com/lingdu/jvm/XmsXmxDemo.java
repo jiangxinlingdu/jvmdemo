@@ -1,23 +1,31 @@
-package com.imooc.jvm;
+package com.lingdu.jvm;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OOMDemo {
+public class XmsXmxDemo {
     private static final int _1MB = 1024 * 1024;
 
 
     /*
        -Xms20m
-       -Xmx20m
+       -Xmx40m
        -Xmn10m
        -XX:+PrintGCDetails
        -XX:+PrintGCDateStamps
        -XX:+UseSerialGC
-       -XX:+HeapDumpOnOutOfMemoryError
        */
 
+
+    /*
+       -Xms40m
+       -Xmx40m
+       -Xmn10m
+       -XX:+PrintGCDetails
+       -XX:+PrintGCDateStamps
+       -XX:+UseSerialGC
+       */
 
 
     public static void main(String[] args) throws Exception {
@@ -30,6 +38,6 @@ public class OOMDemo {
             Thread.sleep(100);
         }
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 }
